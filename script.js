@@ -370,3 +370,81 @@ function toggleCertification(header) {
     item.classList.add('active');
   }
 }
+
+// Particle Effect
+class Particle {
+  constructor(canvas, x, y) {
+    this.canvas = canvas;
+    this.x = x;
+    this.y = y;
+    this.size = Math.random() * 2 + 0.5;
+    this.speedX = Math.random() * 1.5 - 0.75;
+    this.speedY = Math.random() * 1.5 - 0.75;
+    this.color = '#2a2a2a';
+    this.opacity = Math.random() * 0.3 + 0.1;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    if (this.size > 0.2) this.size -= 0.01;
+
+    // Bounce off edges
+    if (this.x < 0 || this.x > this.canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > this.canvas.height) this.speedY *= -1;
+  }
+
+  draw(ctx) {
+    ctx.fillStyle = this.color;
+    ctx.globalAlpha = this.opacity;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+function initParticles() {
+  const canvas = document.getElementById('particleCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const particles = [];
+  const particleCount = 100;
+
+  // Set canvas size
+  function resizeCanvas() {
+    canvas.width = 500;
+    canvas.height = 500;
+  }
+  resizeCanvas();
+
+  // Create particles
+  for (let i = 0; i < particleCount; i++) {
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height;
+    particles.push(new Particle(canvas, x, y));
+  }
+
+  // Animation loop
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    particles.forEach((particle, index) => {
+      particle.update();
+      particle.draw(ctx);
+
+      // Replace particles that are too small
+      if (particle.size <= 0.2) {
+        particles[index] = new Particle(canvas, Math.random() * canvas.width, Math.random() * canvas.height);
+      }
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+// Initialize particles when the page loads
+window.addEventListener('load', initParticles);

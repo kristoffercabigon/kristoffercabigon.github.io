@@ -195,7 +195,7 @@ section {
     margin: auto 0;
     position: relative;
     z-index: 1; /* Lower z-index for profile picture */
-  }
+}
 
 .section__text {
   align-self: center;
