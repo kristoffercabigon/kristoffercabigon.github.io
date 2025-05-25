@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+
+  </head>
+
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Kris.Dev</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="btn btn-color-2" title="Toggle light/dark mode" style="margin-left:1rem;">🌙</button>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Kris.Dev</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#certifications" onclick="toggleMenu()">Certificates</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+      <!-- Theme Toggle Button for Hamburger Nav -->
+      <button id="theme-toggle-mobile" class="btn btn-color-2" title="Toggle light/dark mode" style="margin:10px auto;display:block;">🌙</button>
+    </nav>
+
+    <!-- Profile Section Start-->
+    <section id="profile">
+      <div class="section__pic-container"
+          style="border-radius: 50%; overflow: hidden; width: 500px; height: 500px; background-color: #93a8a9;">
+        <img src="./assets/profile-pic.jpg" alt="Kris profile picture"
+            style="width: 100%; height: 100%; object-fit: contain;" />
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Kristoffer</h1>
+        <p class="section__text__p2">Full-Stack Developer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/Cabigon_Kristoffer_Resume.pdf')">
+            Download Resume
+          </button>
+          <button class="btn btn-color-2" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <a href="https://www.linkedin.com/in/kristoffer-cabigon/" target="_blank">
+            <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+<img src="./assets/ArrowDn.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#about'" />
+
+    <!-- About Section Start-->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">ABOUT ME</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/Profile-pic2.png" alt="Profile picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>Internship & Academic Projects<br />Web & System Development</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>BSIS [Bachelors Of Science in Informaiton Systems]
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hello! I'm Kristofer D. Cabigon, a passionate Web Developer with a strong foundation in PHP, Laravel, JavaScript, Tailwind CSS, MySQL, and Git. I specialize in building efficient, secure, and user-friendly web systems that solve real-world problems and enhance user experiences.
+              With a background in Information Systems and hands-on experience in full-stack development, I thrive on turning complex ideas into practical digital solutions. I enjoy working on systems that are not only functional but also intuitive and scalable.
+              When I'm not coding, you'll find me playing video games, creating art, or exploring new technologies.
+              <br>Let's build something meaningful together!</br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<img src="./assets/ArrowDn.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+
+    <!-- Experience Section Start-->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience In Technologies</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Development Skills Container -->
+          <div class="details-container">
+            <div class="container-nav">
+              <button class="nav-btn prev-btn" style="visibility: hidden;">←</button>
+              <h2 class="experience-sub-title">Development</h2>
+              <button class="nav-btn next-btn">→</button>
+            </div>
+            <!-- Page 1 -->
+            <div class="article-container" data-page="0">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Laravel</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Tailwind CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+            <!-- Page 2 -->
+            <div class="article-container" data-page="1" style="display: none;">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Alpine.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Leaflet JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>VBA</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+            <div class="page-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+
+          <!-- Other Technologies Container -->
+          <div class="details-container">
+            <div class="container-nav">
+              <button class="nav-btn prev-btn" style="display: none;">←</button>
+              <h2 class="experience-sub-title">Other Technologies</h2>
+              <button class="nav-btn next-btn" style="display: none;">→</button>
+            </div>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>RESTful API</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Ganache</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Truffle</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Solidity</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Web3.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+            <div class="page-dots" style="display: none;">
+              <span class="dot active"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<img src="./assets/ArrowDn.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+
+    <!-- Project Section Start-->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">PROJECTS</h1>
+
+
+      <div class="projects-container">
+
+        <!-- First Project-->
+        <div class="project-card color-container">
+          <div class="article-container">
+            <img src="./assets/SPENDS/OSCASPENDS.jpg" 
+            alt="Project 1" 
+            class="project-img" 
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">OSCA SPENDS</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn">
+              View Details
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="window.open('https://oscaspends.com', '_blank');">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <!-- Second Project-->
+        <div class="project-card color-container">
+          <div class="article-container">
+            <img src="./assets/Amparo High/DRS.jpg" 
+            alt="Project 2" 
+            class="project-img" 
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Document Request System</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Third Project-->
+        <div class="project-card color-container">
+          <div class="article-container">
+            <img src="./assets/La Cine Reserva/LCR.jpg" 
+            alt="Project 3" 
+            class="project-img" 
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">La Cine Reserva</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<img src="./assets/ArrowDn.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#certifications'" />
+
+    <!-- Seminars and Certifications Section Start -->
+    <section id="certifications">
+      <p class="section__text__p1">My Recent</p>
+      <h1 class="title">SEMINARS & CERTIFICATIONS</h1>
+      
+      <div class="certifications-container">
+        <!-- Mastering Digital Success -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Mastering Digital Success From Web Development to Virtual Innovation</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Mastering Digital Success From Web Development to Virtual Innovation.jpg" alt="Web Development Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">February 2025</p>
+                <p class="certificate-issuer">Gordon College, Olongapo City</p>
+                <p class="certificate-description">
+                  This comprehensive certification program covered both front-end and back-end web development technologies, providing a holistic understanding of modern web development practices. Through hands-on projects and intensive training, I gained expertise in creating responsive, user-friendly websites while implementing robust server-side functionality. The program emphasized practical skills in full-stack development, enabling me to build complete web applications from concept to deployment.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Front-End Web Development</li>
+                    <li>Back-End Web Development</li>
+                    <li>Web Development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- A-Z Guide to AI -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>A-Z Guide to AI in Education</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/A-Z Guide to AI in Education.jpg" alt="AI Education Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This comprehensive course provided a complete overview of artificial intelligence applications in educational settings. I learned about various AI tools and technologies that can enhance learning experiences and educational outcomes. The program covered everything from basic AI concepts to practical implementations in classroom settings, preparing educators and technologists to leverage AI effectively in education.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI and Prompt Engineering -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Artificial Intelligence and Prompt Engineering in Digital Literacy</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Artificial Intelligence and Prompt Engineering in Digital Literacy.jpg" alt="AI Prompt Engineering Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This specialized certification focused on the intersection of AI and prompt engineering in the context of digital literacy. I gained expertise in crafting effective prompts for AI systems and understanding how to optimize AI interactions. The course emphasized practical applications of prompt engineering in various digital contexts, enhancing my ability to work with AI tools efficiently.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Power of AI Tools -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>The Power of AI Tools</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/The Power of AI Tools.jpg" alt="AI Tools Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This certification program explored the vast landscape of AI tools and their practical applications in various industries. I learned about different AI technologies, their capabilities, and how to leverage them effectively in real-world scenarios. The course provided hands-on experience with popular AI tools and frameworks, enhancing my understanding of AI's potential in solving complex problems.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI in Data Analytics -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Artificial Intelligence in Data Analytics</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Artificial Intelligence in Data Analytics.jpg" alt="AI Analytics Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This certification focused on the application of AI techniques in data analytics and business intelligence. I learned how to leverage AI algorithms for data analysis, pattern recognition, and predictive modeling. The program provided practical experience in using AI tools for extracting meaningful insights from complex datasets, enhancing my capabilities in data-driven decision making.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embracing Ethics in AI -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Embracing Ethics in AI: Shaping Responsible Innovators</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Embracing Ethics in AI Shaping Responsible Innovators.jpg" alt="AI Ethics Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Polytechnic University of the Philippines</p>
+                <p class="certificate-description">
+                  This crucial certification program delved into the ethical considerations and responsibilities in AI development and implementation. I gained insights into the ethical frameworks governing AI, understanding the importance of responsible innovation in the field. The course emphasized the balance between technological advancement and ethical considerations, preparing me to make responsible decisions in AI development.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OJT Certificate -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>OJT Certificate</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/OJT Certificate.jpg" alt="OJT Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">August 2024</p>
+                <p class="certificate-issuer">Amparo High School</p>
+                <p class="certificate-description">
+                  During my On-the-Job Training at Amparo High School, I gained comprehensive experience in full-stack web development and database management. I was involved in developing and maintaining web applications while providing technical support and administrative assistance. This hands-on experience allowed me to apply theoretical knowledge in a real-world setting, enhancing my practical skills in both front-end and back-end development.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Fullstack Web Development</li>
+                    <li>Database Management System</li>
+                    <li>Web Development</li>
+                    <li>Technical Support</li>
+                    <li>Administrative Assistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laravel MVC -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Introduction to Laravel Model, View and Controller Architecture for Beginner Seminar</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Introduction to Laravel Model, View and Controller Architecture for Beginner Seminar.png" alt="Laravel MVC Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">May 2024</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This seminar provided a foundational understanding of Laravel's MVC architecture, essential for modern web development. I learned about the core concepts of Models, Views, and Controllers in Laravel framework and how they interact to create robust web applications. The program included practical examples and best practices for implementing MVC patterns in Laravel projects.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Laravel</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI Path -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>UI Path for Business Process Automation</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/UI Path for Business Process Automation.png" alt="UI Path Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">May 2024</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This certification focused on utilizing UI Path for automating business processes and enhancing front-end development efficiency. I gained expertise in creating automated workflows and implementing user interface improvements through UI Path's powerful tools. The program emphasized practical applications of process automation in web development contexts.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Front-End Web Development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Career Paths in IT -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>How to Choose Potential Career Paths in IT (Plus FAQs): The Ultimate Guide</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/How to Choose Potential Career Paths in IT (Plus FAQs) The Ultimate Guide.jpg" alt="IT Career Paths Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">March 2024</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This comprehensive guide provided valuable insights into various career paths available in the IT industry. The program covered different specializations, required skills, and industry trends to help make informed career decisions. Through this course, I gained a deeper understanding of the IT landscape and how to align my skills and interests with potential career opportunities.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Career Planning</li>
+                    <li>IT Industry Knowledge</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>SQL</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/SQL.png" alt="SQL Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">November 2022</p>
+                <p class="certificate-issuer">Sololearn</p>
+                <p class="certificate-description">
+                  This certification program provided comprehensive training in SQL and database management using MySQL. I learned essential database concepts, query optimization, and best practices for database design and manipulation. The course equipped me with practical skills in writing complex queries and managing relational databases effectively.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>MySQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Augmented Reality -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Rise of Technology, The Augmented Reality Seminar</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Rise of Technology, The Augmented Reality Seminar.png" alt="AR Seminar Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">December 2022</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This seminar explored the emerging field of augmented reality and its impact on modern technology. I gained insights into AR development, implementation strategies, and its various applications across different industries. The program provided a comprehensive understanding of how AR is shaping the future of interactive digital experiences.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Augmented Reality</li>
+                    <li>Emerging Technologies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<img src="./assets/ArrowUp.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#profile'" />
+
+    <!-- Contact Section Start-->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:kristoffercabigon@gmail.com.com">kristoffercabigon@gmail.com</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p>
+            <a href="https://www.linkedin.com/in/kristoffer-cabigon/" target="_blank"
+              rel="noopener noreferrer">kristoffer</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Section Start-->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#498; 2025 @KristofferDC. All Rights Reserved.</p>
+      <!-- <p>View me in Light/Dark Mode, toggle the theme button from nav bar.</p>  -->
+    </footer>
+    <script src="script.js"></script>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content landscape">
+        <span class="close-modal">&times;</span>
+        <div class="modal-stack">
+          <!-- Image Gallery -->
+          <div class="gallery-section">
+            <div class="gallery-main">
+              <button class="gallery-nav prev-slide">&#10094;</button>
+              <img src="" alt="Main project image" id="gallery-main-img">
+              <button class="gallery-nav next-slide">&#10095;</button>
+            </div>
+          </div>
+          <!-- Project Description -->
+          <div class="project-details">
+            <h2 id="modal-title"></h2>
+            <div class="project-description">
+              <p id="modal-description"></p>
+            </div>
+            <div class="tech-stack">
+              <h3>Technologies Used:</h3>
+              <ul id="modal-tech-stack">
+                <!-- Tech stack will be added dynamically -->
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="#" id="demo-link" class="btn btn-color-2" style="margin-bottom: 25px;" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
