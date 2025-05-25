@@ -133,7 +133,7 @@ const projectData = [
     title: 'La Cine Reserva',
     description: 'La Cine Reserva is a web-based application that we have designed for a local movie theater to streamline the process of reserving seats for movies. Built using PHP, HTML/CSS, JavaScript, Bootstrap, and MySQL, it allows users to easily reserve seats for movies, while helping the theater efficiently manage and track these reservations.',
     images: [
-      './assets/La Cine Reserva/1.user_home.jpg',
+      './assets/La Cine Reserva/1.user_Home.jpg',
       './assets/La Cine Reserva/2.user_footer.jpg',
       './assets/La Cine Reserva/3.user_contact.jpg',
       './assets/La Cine Reserva/4.user_nowshowing.jpg',
