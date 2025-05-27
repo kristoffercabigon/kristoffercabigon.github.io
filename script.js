@@ -100,6 +100,7 @@ const projectData = [
       "Alpine.js",
       "Tailwind CSS",
       "MySQL",
+      "Restful API",
       "Ganache",
       "Truffle",
       "Web3.js",
