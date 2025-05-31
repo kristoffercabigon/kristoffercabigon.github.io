@@ -5,37 +5,6 @@ function toggleMenu() {
     icon.classList.toggle("open");
   }
 
-// THEME TOGGLE
-const themeToggle = document.getElementById('theme-toggle');
-const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-const body = document.body;
-
-function setTheme(isDark) {
-  if (isDark) {
-    body.classList.add('dark-theme');
-    if(themeToggle) themeToggle.textContent = '☀️';
-    if(themeToggleMobile) themeToggleMobile.textContent = '☀️';
-  } else {
-    body.classList.remove('dark-theme');
-    if(themeToggle) themeToggle.textContent = '🌙';
-    if(themeToggleMobile) themeToggleMobile.textContent = '🌙';
-  }
-}
-
-function toggleTheme() {
-  const isDark = !body.classList.contains('dark-theme');
-  setTheme(isDark);
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
-
-if(themeToggle) themeToggle.addEventListener('click', toggleTheme);
-if(themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
-
-// On load, set theme from localStorage
-const savedTheme = localStorage.getItem('theme');
-if(savedTheme === 'dark') setTheme(true);
-else setTheme(false);
-
 // Project Data with Gallery Images
 const projectData = [
   {
@@ -147,7 +116,7 @@ const projectData = [
     id: "lacinereserva",
     title: "La Cine Reserva",
     description:
-      "La Cine Reserva is a web-based movie seat reservation system developed as part of our academic project. It was designed to simulate the operations of a local movie theater by streamlining the seat reservation process. Built using PHP, HTML/CSS, JavaScript, Bootstrap, and MySQL, the system allows users to reserve seats for movies while demonstrating how theaters can efficiently manage and track reservations. It also features geolocation functionality using Leaflet and OpenStreetMap, allowing users to view the theater’s location interactively on a map.",
+      "La Cine Reserva is a web-based movie seat reservation system developed as part of our academic project. It was designed to simulate the operations of a local movie theater by streamlining the seat reservation process. Built using PHP, HTML/CSS, JavaScript, Bootstrap, and MySQL, the system allows users to reserve seats for movies while demonstrating how theaters can efficiently manage and track reservations. It also features geolocation functionality using Leaflet and OpenStreetMap, allowing users to view the theater's location interactively on a map.",
     images: [
       "./assets/La Cine Reserva/1.user_Home.jpg",
       "./assets/La Cine Reserva/2.user_footer.jpg",

@@ -34,12 +34,13 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 17vh;
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.9);
+  gap: 8rem;
 }
 
 .nav-links {
@@ -500,6 +501,7 @@ article .icon {
 }
 
 .contact-info-upper-container {
+  gap: 0.5rem;
   display: flex;
   justify-content: center;
   border-radius: 2rem;
@@ -542,61 +544,6 @@ footer {
 
 footer p {
   text-align: center;
-}
-
-/* THEME: LIGHT/DARK MODE */
-body.dark-theme {
-  background-color: #181818;
-  color: #f1f1f1;
-}
-body.dark-theme nav,
-body.dark-theme .details-container,
-body.dark-theme .contact-info-upper-container {
-  background: #232323;
-  border-color: #444;
-}
-body.dark-theme .nav-links a,
-body.dark-theme .logo,
-body.dark-theme .menu-links a {
-  color: #f1f1f1;
-}
-body.dark-theme .btn,
-body.dark-theme .btn-color-1,
-body.dark-theme .btn-color-2 {
-  background: #232323;
-  color: #f1f1f1;
-  border-color: #888;
-}
-body.dark-theme .btn:hover,
-body.dark-theme .btn-color-1:hover,
-body.dark-theme .btn-color-2:hover {
-  background: #444;
-  color: #fff;
-}
-body.dark-theme .project-card {
-  background: #232323;
-}
-body.dark-theme .project-title {
-  color: #fff;
-}
-body.dark-theme .menu-links {
-  background: #232323;
-}
-body.dark-theme .hamburger-icon span {
-  background-color: #f1f1f1;
-}
-body.dark-theme p {
-  color: #ccc;
-}
-body.dark-theme .icon {
-  filter: brightness(0.8) invert(0.8);
-}
-body.dark-theme section,
-body.dark-theme footer {
-  background-color: rgba(24, 24, 24, 0.9); /* Semi-transparent dark background */
-}
-body.dark-theme .details-container {
-  background-color: rgba(35, 35, 35, 0.8) !important;
 }
 
 /* PROJECT MODAL */
@@ -741,65 +688,6 @@ body.dark-theme .details-container {
   margin-top: 1.5rem;
 }
 
-/* Dark theme support */
-body.dark-theme .gallery-section {
-  background: #1a1a1a;
-}
-
-body.dark-theme .gallery-main {
-  background: #2a2a2a;
-}
-
-body.dark-theme .gallery-nav {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-body.dark-theme .gallery-nav:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-body.dark-theme .tech-stack li {
-  background: #333;
-  color: #fff;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .modal-content.landscape {
-    height: 95vh;
-  }
-  
-  .gallery-section {
-    height: 50%;
-    padding: 1rem;
-  }
-
-  .gallery-main {
-    min-height: 200px;
-  }
-
-  .gallery-nav {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
-  }
-
-  .project-details {
-    height: 50%;
-    padding: 1rem;
-  }
-
-  .project-details h2 {
-    font-size: 1.5rem;
-  }
-
-  .tech-stack li {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
 /* CONTAINER NAVIGATION */
 
 .container-nav {
@@ -859,29 +747,6 @@ body.dark-theme .tech-stack li {
 .dot.active {
   background-color: #000000;
   transform: scale(1.2);
-}
-
-/* Dark theme support for navigation */
-body.dark-theme .nav-btn {
-  color: white;
-}
-
-body.dark-theme .nav-btn:hover {
-  color: rgb(200, 200, 200);
-}
-
-body.dark-theme .dot {
-  background-color: #4a4a4a;
-}
-
-body.dark-theme .dot.active {
-  background-color: #ffffff;
-}
-
-/* Ensure articles maintain consistent layout */
-.article-container article {
-  display: flex;
-  transition: all 300ms ease;
 }
 
 /* CERTIFICATIONS SECTION */
@@ -1007,59 +872,6 @@ body.dark-theme .dot.active {
   color: rgb(85, 85, 85);
 }
 
-/* Dark theme support for certifications */
-body.dark-theme .certification-item {
-  background: #232323 !important;
-  border-color: #444;
-  background-color: rgba(35, 35, 35, 0.8) !important;
-}
-
-body.dark-theme .certification-header h3,
-body.dark-theme .certificate-date,
-body.dark-theme .certificate-issuer,
-body.dark-theme .certificate-description,
-body.dark-theme .skills-covered h4 {
-  color: #f1f1f1;
-}
-
-body.dark-theme .certification-header:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-body.dark-theme .skills-covered li {
-  background: #333;
-  color: #fff;
-}
-
-body.dark-theme .certification-content {
-  background-color: rgba(35, 35, 35, 0.8);
-}
-
-body.dark-theme .certification-grid {
-  background-color: rgba(35, 35, 35, 0.8);
-}
-
-/* Responsive design for certifications */
-@media screen and (max-width: 768px) {
-  .certification-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .certification-header h3 {
-    font-size: 1rem;
-  }
-
-  .certificate-description {
-    font-size: 0.9rem;
-  }
-
-  .skills-covered li {
-    font-size: 0.8rem;
-  }
-}
-
 /* Add media query for hamburger menu display */
 @media screen and (max-width: 768px) {
   #hamburger-nav {
@@ -1067,10 +879,6 @@ body.dark-theme .certification-grid {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 999;
-  }
-
-  body.dark-theme #hamburger-nav {
-    background-color: rgba(35, 35, 35, 0.95);
   }
 }
 
