@@ -1,0 +1,194 @@
+/* About Flip Card — inspired by React Bits Flip Card API
+ * https://www.reactbits.dev/micro/flip-card
+ */
+
+.about-pic-wrapper {
+  position: relative;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.about-pic-wrapper:hover {
+  box-shadow: none;
+}
+
+.about-flip-card {
+  --fc-width: 300px;
+  --fc-height: 400px;
+  --fc-radius: 22px;
+  --fc-bg: #27272a;
+  --fc-color: #f5f5f5;
+  --fc-shadow-color: #000000;
+  --fc-shadow-opacity: 0.45;
+  --fc-perspective: 1100px;
+  --fc-hover-scale: 1.03;
+  --fc-glare: 0.22;
+
+  position: relative;
+  width: var(--fc-width);
+  height: var(--fc-height);
+  perspective: var(--fc-perspective);
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  outline: none;
+}
+
+.about-flip-card:active {
+  cursor: grabbing;
+}
+
+.about-flip-card:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 4px;
+  border-radius: calc(var(--fc-radius) + 2px);
+}
+
+.about-flip-card__scene {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.about-flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  border-radius: var(--fc-radius);
+  will-change: transform;
+}
+
+.about-flip-card__face {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--fc-radius);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--fc-bg);
+  color: var(--fc-color);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, calc(var(--fc-shadow-opacity)));
+}
+
+.about-flip-card__face--front {
+  transform: rotateY(0deg);
+}
+
+.about-flip-card__face--back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: stretch;
+}
+
+.about-flip-card[data-axis="x"] .about-flip-card__face--front {
+  transform: rotateX(0deg);
+}
+
+.about-flip-card[data-axis="x"] .about-flip-card__face--back {
+  transform: rotateX(180deg);
+}
+
+.about-flip-card__face picture,
+.about-flip-card__face .about-pic {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-flip-card__face .about-pic {
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+}
+
+.about-flip-card__back {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  background:
+    linear-gradient(165deg, #3f3f46 0%, #27272a 48%, #18181b 100%);
+}
+
+.about-flip-card__eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.62);
+}
+
+.about-flip-card__back h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--fc-color);
+}
+
+.about-flip-card__back p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(245, 245, 245, 0.82);
+}
+
+.about-flip-card__hint {
+  margin-top: 0.85rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.45);
+}
+
+.about-flip-card__glare {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--fc-radius);
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: soft-light;
+  background: radial-gradient(
+    circle at var(--fc-glare-x, 50%) var(--fc-glare-y, 50%),
+    rgba(255, 255, 255, var(--fc-glare)),
+    rgba(255, 255, 255, 0) 55%
+  );
+  transition: opacity 0.2s ease;
+  z-index: 4;
+}
+
+.about-flip-card.is-hovering .about-flip-card__glare,
+.about-flip-card.is-dragging .about-flip-card__glare {
+  opacity: 1;
+}
+
+@media screen and (max-width: 950px) {
+  .about-pic-wrapper {
+    margin: 0 auto;
+  }
+
+  .about-flip-card {
+    --fc-width: min(300px, 78vw);
+    --fc-height: min(400px, calc(min(300px, 78vw) * 4 / 3));
+    width: var(--fc-width);
+    height: var(--fc-height);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-flip-card {
+    cursor: pointer;
+  }
+}

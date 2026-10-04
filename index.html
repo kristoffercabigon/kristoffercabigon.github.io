@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kris.Dev</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="preloader.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="hero-tech-text.css">
+    <link rel="stylesheet" href="about-flip-card.css">
+    <link rel="stylesheet" href="side-hud.css">
+    <script src="preloader.js"></script>
+    <script src="menu.js" defer></script>
+    <script src="hero-tech-text.js" defer></script>
+    <script src="about-flip-card.js" defer></script>
+    <script src="side-hud.js" defer></script>
+  </head>
+
+  <body>
+    <div id="portfolio-loader" class="portfolio-loader" hidden>
+      <span class="portfolio-loader__status" role="status">Loading the portfolio of Kristoffer Cabigon</span>
+      <div class="portfolio-loader__corner portfolio-loader__corner--tl" aria-hidden="true"><span>Kristoffer</span></div>
+      <div class="portfolio-loader__corner portfolio-loader__corner--tr" aria-hidden="true"><span>Cabigon</span></div>
+      <div class="portfolio-loader__brand" aria-hidden="true">
+        <div class="portfolio-loader__line portfolio-loader__line--name"><span class="portfolio-loader__letter">K</span><span class="portfolio-loader__letter">R</span><span class="portfolio-loader__letter">I</span><span class="portfolio-loader__letter">S</span><span class="portfolio-loader__letter">.</span></div>
+        <div class="portfolio-loader__replacement">
+          <div class="portfolio-loader__line portfolio-loader__line--suffix"><span class="portfolio-loader__letter">D</span><span class="portfolio-loader__letter">C</span></div>
+          <div class="portfolio-loader__dev-position"><div class="portfolio-loader__line portfolio-loader__line--dev"><span class="portfolio-loader__letter">D</span><span class="portfolio-loader__letter">E</span><span class="portfolio-loader__letter">V</span></div></div>
+        </div>
+      </div>
+      <div class="portfolio-loader__corner portfolio-loader__corner--bl" aria-hidden="true"><span>Portfolio</span></div>
+      <div class="portfolio-loader__corner portfolio-loader__corner--br" aria-hidden="true"><span>2026</span></div>
+    </div>
+    <div id="portfolio-content">
+    <div class="pm-shell" data-menu-state="closed">
+      <header class="pm-header">
+        <a class="pm-brand" href="#profile">Kris.Dev</a>
+        <button class="pm-toggle" type="button" aria-expanded="false" aria-controls="portfolio-menu" aria-label="Open menu">
+          <span class="pm-toggle-label" aria-hidden="true"><span class="pm-toggle-menu">Menu</span><span class="pm-toggle-close">Close</span></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <line class="pm-icon-middle" x1="2" y1="12" x2="22" y2="12"/>
+            <line class="pm-icon-top" x1="2" y1="4" x2="22" y2="4"/>
+            <line class="pm-icon-bottom" x1="2" y1="20" x2="22" y2="20"/>
+          </svg>
+        </button>
+      </header>
+      <div id="portfolio-menu" class="pm-layer" hidden>
+        <div class="pm-backdrop" aria-hidden="true"></div>
+        <div class="pm-panel">
+          <div class="pm-panel-base"></div>
+          <div class="pm-panel-wash pm-panel-wash--first"></div>
+          <div class="pm-panel-wash pm-panel-wash--second"></div>
+          <div class="pm-panel-content">
+            <nav class="pm-navigation" aria-label="Main navigation">
+              <ul class="pm-list">
+                <li class="pm-item"><a class="pm-link" href="#about"><span class="pm-link-mask"><span class="pm-link-roll" data-label="About">About</span></span></a></li>
+                <li class="pm-item"><a class="pm-link" href="#experience"><span class="pm-link-mask"><span class="pm-link-roll" data-label="Experience">Experience</span></span></a></li>
+                <li class="pm-item"><a class="pm-link" href="#stack"><span class="pm-link-mask"><span class="pm-link-roll" data-label="Stack">Stack</span></span></a></li>
+                <li class="pm-item"><a class="pm-link" href="#projects"><span class="pm-link-mask"><span class="pm-link-roll" data-label="Projects">Projects</span></span></a></li>
+                <li class="pm-item"><a class="pm-link" href="#certifications"><span class="pm-link-mask"><span class="pm-link-roll" data-label="Certificates">Certificates</span></span></a></li>
+                <li class="pm-item"><a class="pm-link" href="#contact"><span class="pm-link-mask"><span class="pm-link-roll" data-label="Contact">Contact</span></span></a></li>
+              </ul>
+            </nav>
+            <div class="pm-details">
+              <div><h2>Contact</h2><ul><li><a href="mailto:kristoffercabigon@gmail.com">kristoffercabigon@gmail.com</a></li></ul></div>
+              <div><h2>Socials</h2><ul>
+                <li><a href="https://www.linkedin.com/in/kristoffer-cabigon/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+                <li><a href="https://github.com/kristoffercabigon" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+              </ul></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pm-header-space" aria-hidden="true"></div>
+    <noscript><div class="pm-nojs"><a href="#about">About</a> <a href="#experience">Experience</a> <a href="#stack">Stack</a> <a href="#projects">Projects</a> <a href="#certifications">Certificates</a> <a href="#contact">Contact</a></div></noscript>
+    <div id="menu-page">
+
+    <!-- Profile Section Start-->
+    <section id="profile">
+      <div class="profile-pic-wrapper" style="position: relative;">
+        <canvas id="particleCanvas" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0;"></canvas>
+        <div class="section__pic-container hero-portrait">
+          <img src="./assets/profile-pic-full.jpg" alt="Kris profile picture" />
+        </div>
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1 hero-greeting">Hello, I'm</p>
+        <h1 class="title hero-tech-text"><span class="hero-tech-fallback">Kristoffer</span><canvas aria-hidden="true"></canvas></h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <a class="btn btn-color-2" href="assets/Kristoffer%20Cabigon%20Resume%20Original.docx" download="Kristoffer Cabigon Resume Original.docx">Download Resume</a>
+          <button class="btn btn-color-2" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+      
+        <div id="socials-container">
+          <a href="https://www.linkedin.com/in/kristoffer-cabigon/" target="_blank">
+            <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
+          </a>
+          <a href="https://github.com/kristoffercabigon" target="_blank">
+            <img src="./assets/github.png" alt="My Github profile" class="icon" />
+          </a>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- About Section Start-->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">ABOUT ME</h1>
+      
+      <div class="about-container">
+        <!-- Profile & Bio Row -->
+        <div class="about-intro-grid">
+          <div class="about-pic-wrapper">
+            <div class="about-flip-card" data-about-flip-card>
+              <div class="about-flip-card__scene">
+                <div class="about-flip-card__inner">
+                  <div class="about-flip-card__face about-flip-card__face--front">
+                    <picture>
+                      <source media="(max-width: 950px)" srcset="./assets/second-profile-pic-full.jpg" />
+                      <img src="./assets/second-profile-pic-full-portrait.jpg" alt="Kristoffer Cabigon" class="about-pic" />
+                    </picture>
+                  </div>
+                  <div class="about-flip-card__face about-flip-card__face--back">
+                    <div class="about-flip-card__back">
+                      <p class="about-flip-card__eyebrow">Software Developer</p>
+                      <h3>Kristoffer Cabigon</h3>
+                      <p>Enterprise web · legacy modernization · application support</p>
+                      <p>Caloocan, Philippines</p>
+                      <p class="about-flip-card__hint">Click or drag to flip</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="about-flip-card__glare" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="about-bio-content">
+            <h2 class="about-bio-heading">Transforming complex business operations into streamlined digital systems.</h2>
+            <p class="about-bio-text">
+              Hello! I’m <strong>Kristoffer Cabigon</strong>, a software developer based in Caloocan, Philippines. I specialize in enterprise web development, legacy system modernization, and application support.
+            </p>
+            <p class="about-bio-text">
+              My background bridges hands-on database architecture, API integration, and user-focused frontend engineering. From modernizing mission-critical legacy desktop tools to architecting dedicated ticketing workflows, I focus on building dependable software that solves operational bottlenecks and scales cleanly.
+            </p>
+            <div class="about-quick-tags">
+              <span class="about-quick-pill"><span class="about-status-dot"></span> Open to Opportunities</span>
+              <span class="about-quick-pill">📍 Caloocan, Philippines</span>
+              <span class="about-quick-pill">🎓 BS in Information Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section Start-->
+    <section id="experience">
+      <p class="section__text__p1">Where I've Worked &amp; Built</p>
+      <h1 class="title">EXPERIENCE</h1>
+
+      <div class="about-container">
+        <div class="experience-showcase">
+          <div class="exp-timeline-list">
+            <!-- Executive Optical -->
+            <div class="exp-item">
+              <div class="exp-date-col">2026 — PRESENT</div>
+              <div class="exp-main-col">
+                <div class="exp-role-row">
+                  <div>
+                    <h3 class="exp-role-title">Application Support</h3>
+                    <p class="exp-company-name">Executive Optical</p>
+                  </div>
+                  <div class="exp-glyph" aria-hidden="true">
+                    <svg class="exp-glyph-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="10.25" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="18.5" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="2" y="10.25" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="9.5" y="9.5" width="5" height="5" rx="1" fill="#18181b"/>
+                      <rect x="18.5" y="10.25" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="2" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="10.25" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="18.5" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="exp-description">
+                  Application support, system testing, and workflow and database documentation. Assisting branch and Head Office users, documenting system workflows and MySQL databases with DFDs and ERDs. Independently developed and presented the internal EO Ticketing System to improve the support workflow.
+                </p>
+                <div class="exp-tags-wrapper">
+                  <span class="exp-tag">MySQL</span>
+                  <span class="exp-tag">System Testing</span>
+                  <span class="exp-tag">DFD</span>
+                  <span class="exp-tag">ERD</span>
+                  <span class="exp-tag">Technical Support</span>
+                  <span class="exp-tag">EO Ticketing System</span>
+                  <span class="exp-tag">Workflow Documentation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Classic Savory -->
+            <div class="exp-item">
+              <div class="exp-date-col">JUN 2025 — JAN 2026</div>
+              <div class="exp-main-col">
+                <div class="exp-role-row">
+                  <div>
+                    <h3 class="exp-role-title">Systems Programmer</h3>
+                    <p class="exp-company-name">Classic Savory</p>
+                  </div>
+                  <div class="exp-glyph" aria-hidden="true">
+                    <svg class="exp-glyph-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="10.25" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="18.5" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="2" y="10.25" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="9.5" y="9.5" width="5" height="5" rx="1" fill="#18181b"/>
+                      <rect x="18.5" y="10.25" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="2" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="10.25" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="18.5" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="exp-description">
+                  Enterprise web development, legacy migration, and integrated business systems. Migrated VB.NET and Crystal Reports applications into an integrated Laravel and Next.js platform for HR, biometrics, payroll, and accounting, including database migration, role-based access control, scheduled biometric data retrieval, and local server deployment.
+                </p>
+                <div class="exp-tags-wrapper">
+                  <span class="exp-tag">Laravel</span>
+                  <span class="exp-tag">Next.js</span>
+                  <span class="exp-tag">PHP</span>
+                  <span class="exp-tag">TypeScript</span>
+                  <span class="exp-tag">VB.NET</span>
+                  <span class="exp-tag">MySQL</span>
+                  <span class="exp-tag">Crystal Reports</span>
+                  <span class="exp-tag">REST APIs</span>
+                  <span class="exp-tag">RBAC</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- University of Caloocan City (Education) -->
+            <div class="exp-item">
+              <div class="exp-date-col">2021 — 2025</div>
+              <div class="exp-main-col">
+                <div class="exp-role-row">
+                  <div>
+                    <h3 class="exp-role-title">Bachelor of Science in Information Systems</h3>
+                    <p class="exp-company-name">University of Caloocan City</p>
+                  </div>
+                  <div class="exp-glyph" aria-hidden="true">
+                    <svg class="exp-glyph-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="10.25" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="18.5" y="2" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="2" y="10.25" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="9.5" y="9.5" width="5" height="5" rx="1" fill="#18181b"/>
+                      <rect x="18.5" y="10.25" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="2" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="10.25" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                      <rect x="18.5" y="18.5" width="3.5" height="3.5" rx="0.75" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="exp-description">
+                  Focused on software development, database design, systems analysis, and enterprise information systems. Served as lead systems developer on academic enterprise platforms and capstone projects.
+                </p>
+                <div class="exp-tags-wrapper">
+                  <span class="exp-tag">Information Systems</span>
+                  <span class="exp-tag">Database Design</span>
+                  <span class="exp-tag">SDLC</span>
+                  <span class="exp-tag">Web Development</span>
+                  <span class="exp-tag">DFD &amp; ERD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack Section Start-->
+    <section id="stack">
+      <p class="section__text__p1">What I Reach For</p>
+      <h1 class="title">TECH STACK</h1>
+      <p class="stack-intro">
+        One flow, five layers. The same tools show up across every project — a focused set I know well enough to ship on a deadline, from the interface down to the database.
+      </p>
+
+      <div class="stack-layers">
+        <div class="stack-layer">
+          <h2 class="stack-layer-title">Languages</h2>
+          <ul class="stack-items">
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/php/777BB4" alt="" class="stack-icon" loading="lazy"><span>PHP</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" class="stack-icon" loading="lazy"><span>TypeScript</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" class="stack-icon" loading="lazy"><span>JavaScript</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" class="stack-icon" loading="lazy"><span>SQL</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/dotnet/512BD4" alt="" class="stack-icon" loading="lazy"><span>VB.NET</span></li>
+          </ul>
+        </div>
+
+        <div class="stack-layer">
+          <h2 class="stack-layer-title">Frameworks &amp; Libraries</h2>
+          <ul class="stack-items">
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="" class="stack-icon" loading="lazy"><span>Laravel</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" class="stack-icon" loading="lazy"><span>React.js</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="" class="stack-icon" loading="lazy"><span>Next.js</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" class="stack-icon" loading="lazy"><span>React Native</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" class="stack-icon" loading="lazy"><span>Tailwind CSS</span></li>
+          </ul>
+        </div>
+
+        <div class="stack-layer">
+          <h2 class="stack-layer-title">Databases</h2>
+          <ul class="stack-items">
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" class="stack-icon" loading="lazy"><span>MySQL</span></li>
+          </ul>
+        </div>
+
+        <div class="stack-layer">
+          <h2 class="stack-layer-title">Tools</h2>
+          <ul class="stack-items">
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/git/F05032" alt="" class="stack-icon" loading="lazy"><span>Git</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/github/181717" alt="" class="stack-icon" loading="lazy"><span>GitHub</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="" class="stack-icon" loading="lazy"><span>Postman</span></li>
+            <li class="stack-item"><img src="https://cdn.simpleicons.org/diagramsdotnet/F08705" alt="" class="stack-icon" loading="lazy"><span>Draw.io</span></li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M4 4h16v4H4zM4 10h10v4H4zM4 16h14v4H4z"/>
+              </svg>
+              <span>Crystal Reports</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="stack-layer">
+          <h2 class="stack-layer-title">Development &amp; Concepts</h2>
+          <ul class="stack-items">
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M4 8h6v8H4zM14 8h6v8h-6zM10 12h4"/>
+              </svg>
+              <span>REST APIs</span>
+            </li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/>
+                <path d="M8.3 11l7.2-4M8.3 13l7.2 4"/>
+              </svg>
+              <span>API Integration</span>
+            </li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6"/><path d="M5 12v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/>
+              </svg>
+              <span>Database Design</span>
+            </li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M12 3l8 4v5c0 4.5-3.2 7.4-8 9-4.8-1.6-8-4.5-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/>
+              </svg>
+              <span>RBAC</span>
+            </li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <rect x="3" y="4" width="6" height="4" rx="1"/><rect x="15" y="4" width="6" height="4" rx="1"/><rect x="9" y="16" width="6" height="4" rx="1"/>
+                <path d="M6 8v3h12V8M12 11v5"/>
+              </svg>
+              <span>DFD</span>
+            </li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <rect x="3" y="5" width="7" height="5" rx="1"/><rect x="14" y="5" width="7" height="5" rx="1"/><rect x="8.5" y="14" width="7" height="5" rx="1"/>
+                <path d="M6.5 10v2h11V10M12 12v2"/>
+              </svg>
+              <span>ERD</span>
+            </li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M9 11l3 3 8-8"/><path d="M21 12a9 9 0 11-3.3-6.9"/>
+              </svg>
+              <span>System Testing</span>
+            </li>
+            <li class="stack-item">
+              <svg class="stack-icon stack-icon-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+                <path d="M7 12h3M14 12h3"/>
+              </svg>
+              <span>SDLC</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section Start-->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">PROJECTS</h1>
+
+      <div class="projects-container">
+        <!-- EO Ticketing System card (hidden for now)
+        <div class="project-card color-container">
+          <button type="button" class="project-media" aria-label="View EO Ticketing System details">
+            <img src="assets/EO%20Ticketing%20System/Screenshot_4.png" alt="Ticket volume, unresolved priorities, and open-ticket age reports" class="project-img" loading="lazy">
+          </button>
+          <h2 class="experience-sub-title project-title">EO Ticketing System</h2>
+          <p class="project-context">PERSONAL PROJECT</p>
+          <p class="project-summary">Centralized support ticketing with roles, reporting, and branch workflows.</p>
+          <div class="tech-tags" data-tech="Laravel,Next.js,TypeScript,MySQL"></div>
+          <div class="btn-container">
+            <button type="button" class="btn btn-color-2 project-btn">View Details</button>
+          </div>
+        </div>
+        -->
+
+        <div class="project-card color-container">
+          <button type="button" class="project-media" aria-label="View Classic Savory ERP System details">
+            <img src="assets/Classic%20Savory/Screenshot_79.png" alt="Role-based permission management in the Classic Savory ERP System" class="project-img" loading="lazy">
+          </button>
+          <h2 class="experience-sub-title project-title">Classic Savory ERP System</h2>
+          <p class="project-context">PROFESSIONAL WORK · JUN 2025–JAN 2026</p>
+          <p class="project-summary">Legacy VB.NET systems modernized into a unified Laravel and Next.js ERP.</p>
+          <div class="tech-tags" data-tech="Laravel,Next.js,TypeScript,MySQL,VB.NET,Crystal Reports"></div>
+          <div class="btn-container">
+            <button type="button" class="btn btn-color-2 project-btn">View Details</button>
+          </div>
+        </div>
+
+        <div class="project-card color-container">
+          <button type="button" class="project-media" aria-label="View OSCA SPENDS details">
+            <img src="./assets/SPENDS/OSCASPENDS.jpg" alt="OSCA SPENDS senior citizen pension system" class="project-img" loading="lazy">
+          </button>
+          <h2 class="experience-sub-title project-title">OSCA SPENDS</h2>
+          <p class="project-context">CAPSTONE PROJECT</p>
+          <p class="project-summary">Blockchain-backed senior pension verification with SMS status updates.</p>
+          <div class="tech-tags" data-tech="PHP,Laravel,Node.js,JavaScript,Alpine.js,Tailwind CSS,MySQL,Web3.js,Solidity"></div>
+          <div class="btn-container">
+            <button type="button" class="btn btn-color-2 project-btn">View Details</button>
+          </div>
+        </div>
+
+        <div class="project-card color-container">
+          <button type="button" class="project-media" aria-label="View Document Request System details">
+            <img src="./assets/Amparo High/DRS.jpg" alt="Document Request System for Amparo High School" class="project-img" loading="lazy">
+          </button>
+          <h2 class="experience-sub-title project-title">Document Request System</h2>
+          <p class="project-context">ACADEMIC PROJECT</p>
+          <p class="project-summary">School document requests with tracking, uploads, and registrar tools.</p>
+          <div class="tech-tags" data-tech="PHP,HTML/CSS,JavaScript,Bootstrap,MySQL"></div>
+          <div class="btn-container">
+            <button type="button" class="btn btn-color-2 project-btn">View Details</button>
+          </div>
+        </div>
+
+        <div class="project-card color-container">
+          <button type="button" class="project-media" aria-label="View La Cine Reserva details">
+            <img src="./assets/La Cine Reserva/LCR.jpg" alt="La Cine Reserva movie seat reservation system" class="project-img" loading="lazy">
+          </button>
+          <h2 class="experience-sub-title project-title">La Cine Reserva</h2>
+          <p class="project-context">ACADEMIC PROJECT</p>
+          <p class="project-summary">Movie seat reservations with booking flow and interactive map location.</p>
+          <div class="tech-tags" data-tech="PHP,HTML/CSS,JavaScript,Bootstrap,Leaflet.js,MySQL"></div>
+          <div class="btn-container">
+            <button type="button" class="btn btn-color-2 project-btn">View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seminars and Certifications Section Start -->
+    <section id="certifications">
+      <p class="section__text__p1">My Recent</p>
+      <h1 class="title">SEMINARS & CERTIFICATIONS</h1>
+      
+      <div class="certifications-container">
+        <!-- Mastering Digital Success -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Mastering Digital Success From Web Development to Virtual Innovation</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Mastering Digital Success From Web Development to Virtual Innovation.jpg" alt="Web Development Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">February 2025</p>
+                <p class="certificate-issuer">Gordon College, Olongapo City</p>
+                <p class="certificate-description">
+                  This comprehensive certification program covered both front-end and back-end web development technologies, providing a holistic understanding of modern web development practices. Through hands-on projects and intensive training, I gained expertise in creating responsive, user-friendly websites while implementing robust server-side functionality. The program emphasized practical skills in full-stack development, enabling me to build complete web applications from concept to deployment.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Front-End Web Development</li>
+                    <li>Back-End Web Development</li>
+                    <li>Web Development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- A-Z Guide to AI -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>A-Z Guide to AI in Education</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/A-Z Guide to AI in Education.jpg" alt="AI Education Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This comprehensive course provided a complete overview of artificial intelligence applications in educational settings. I learned about various AI tools and technologies that can enhance learning experiences and educational outcomes. The program covered everything from basic AI concepts to practical implementations in classroom settings, preparing educators and technologists to leverage AI effectively in education.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI and Prompt Engineering -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Artificial Intelligence and Prompt Engineering in Digital Literacy</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Artificial Intelligence and Prompt Engineering in Digital Literacy.jpg" alt="AI Prompt Engineering Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This specialized certification focused on the intersection of AI and prompt engineering in the context of digital literacy. I gained expertise in crafting effective prompts for AI systems and understanding how to optimize AI interactions. The course emphasized practical applications of prompt engineering in various digital contexts, enhancing my ability to work with AI tools efficiently.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Power of AI Tools -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>The Power of AI Tools</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/The Power of AI Tools.jpg" alt="AI Tools Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This certification program explored the vast landscape of AI tools and their practical applications in various industries. I learned about different AI technologies, their capabilities, and how to leverage them effectively in real-world scenarios. The course provided hands-on experience with popular AI tools and frameworks, enhancing my understanding of AI's potential in solving complex problems.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI in Data Analytics -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Artificial Intelligence in Data Analytics</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Artificial Intelligence in Data Analytics.jpg" alt="AI Analytics Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Department of Information and Communications Technology (DICT)</p>
+                <p class="certificate-description">
+                  This certification focused on the application of AI techniques in data analytics and business intelligence. I learned how to leverage AI algorithms for data analysis, pattern recognition, and predictive modeling. The program provided practical experience in using AI tools for extracting meaningful insights from complex datasets, enhancing my capabilities in data-driven decision making.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embracing Ethics in AI -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Embracing Ethics in AI: Shaping Responsible Innovators</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Embracing Ethics in AI Shaping Responsible Innovators.jpg" alt="AI Ethics Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">January 2025</p>
+                <p class="certificate-issuer">Polytechnic University of the Philippines</p>
+                <p class="certificate-description">
+                  This crucial certification program delved into the ethical considerations and responsibilities in AI development and implementation. I gained insights into the ethical frameworks governing AI, understanding the importance of responsible innovation in the field. The course emphasized the balance between technological advancement and ethical considerations, preparing me to make responsible decisions in AI development.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>AI Literacy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OJT Certificate -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>OJT Certificate</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/OJT Certificate.jpg" alt="OJT Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">August 2024</p>
+                <p class="certificate-issuer">Amparo High School</p>
+                <p class="certificate-description">
+                  During my On-the-Job Training at Amparo High School, I gained comprehensive experience in full-stack web development and database management. I was involved in developing and maintaining web applications while providing technical support and administrative assistance. This hands-on experience allowed me to apply theoretical knowledge in a real-world setting, enhancing my practical skills in both front-end and back-end development.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Fullstack Web Development</li>
+                    <li>Database Management System</li>
+                    <li>Web Development</li>
+                    <li>Technical Support</li>
+                    <li>Administrative Assistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laravel MVC -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Introduction to Laravel Model, View and Controller Architecture for Beginner Seminar</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Introduction to Laravel Model, View and Controller Architecture for Beginner Seminar.png" alt="Laravel MVC Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">May 2024</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This seminar provided a foundational understanding of Laravel's MVC architecture, essential for modern web development. I learned about the core concepts of Models, Views, and Controllers in Laravel framework and how they interact to create robust web applications. The program included practical examples and best practices for implementing MVC patterns in Laravel projects.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Laravel</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI Path -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>UI Path for Business Process Automation</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/UI Path for Business Process Automation.png" alt="UI Path Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">May 2024</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This certification focused on utilizing UI Path for automating business processes and enhancing front-end development efficiency. I gained expertise in creating automated workflows and implementing user interface improvements through UI Path's powerful tools. The program emphasized practical applications of process automation in web development contexts.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Front-End Web Development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Career Paths in IT -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>How to Choose Potential Career Paths in IT (Plus FAQs): The Ultimate Guide</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/How to Choose Potential Career Paths in IT (Plus FAQs) The Ultimate Guide.jpg" alt="IT Career Paths Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">March 2024</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This comprehensive guide provided valuable insights into various career paths available in the IT industry. The program covered different specializations, required skills, and industry trends to help make informed career decisions. Through this course, I gained a deeper understanding of the IT landscape and how to align my skills and interests with potential career opportunities.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Career Planning</li>
+                    <li>IT Industry Knowledge</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>SQL</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/SQL.png" alt="SQL Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">November 2022</p>
+                <p class="certificate-issuer">Sololearn</p>
+                <p class="certificate-description">
+                  This certification program provided comprehensive training in SQL and database management using MySQL. I learned essential database concepts, query optimization, and best practices for database design and manipulation. The course equipped me with practical skills in writing complex queries and managing relational databases effectively.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>MySQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Augmented Reality -->
+        <div class="certification-item">
+          <div class="certification-header" onclick="toggleCertification(this)">
+            <h3>Rise of Technology, The Augmented Reality Seminar</h3>
+            <span class="expand-icon">+</span>
+          </div>
+          <div class="certification-content">
+            <div class="certification-grid">
+              <div class="certificate-image">
+                <img src="./assets/Certificates/Rise of Technology, The Augmented Reality Seminar.png" alt="AR Seminar Certificate" />
+              </div>
+              <div class="certificate-details">
+                <p class="certificate-date">December 2022</p>
+                <p class="certificate-issuer">University of Caloocan City</p>
+                <p class="certificate-description">
+                  This seminar explored the emerging field of augmented reality and its impact on modern technology. I gained insights into AR development, implementation strategies, and its various applications across different industries. The program provided a comprehensive understanding of how AR is shaping the future of interactive digital experiences.
+                </p>
+                <div class="skills-covered">
+                  <h4>Skills Covered:</h4>
+                  <ul>
+                    <li>Augmented Reality</li>
+                    <li>Emerging Technologies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section Start-->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:kristoffercabigon@gmail.com.com">kristoffercabigon@gmail.com</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <a href="https://www.linkedin.com/in/kristoffer-cabigon/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/linkedin.png" alt="LinkedIn icon" style="cursor: pointer;" class="icon contact-icon" />
+          </a>
+        </div>
+
+        <div class="contact-info-container">
+          <a href="https://www.github.com/kristoffercabigon" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/github.png" alt="Github icon" style="cursor: pointer;" class="icon contact-icon" />
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Section Start-->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#498; 2025 @KristofferDC. All Rights Reserved.</p>
+      <!-- <p>View me in Light/Dark Mode, toggle the theme button from nav bar.</p>  -->
+    </footer>
+    <script src="script.js"></script>
+    </div><!-- /menu-page -->
+    </div><!-- /portfolio-content -->
+
+    <!-- Project Details Modal (outside page stacking context so it sits above header) -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-content landscape">
+        <button type="button" class="close-modal" aria-label="Close project details">&times;</button>
+        <div class="modal-stack">
+          <div class="gallery-section">
+            <div class="gallery-main">
+              <button type="button" class="gallery-nav prev-slide" aria-label="Previous screenshot">&#10094;</button>
+              <button type="button" class="gallery-zoom-trigger" aria-label="Zoom image">
+                <img alt="Main project image" id="gallery-main-img">
+                <span class="gallery-zoom-hint">Tap to zoom</span>
+              </button>
+              <button type="button" class="gallery-nav next-slide" aria-label="Next screenshot">&#10095;</button>
+            </div>
+          </div>
+          <div class="project-details">
+            <h2 id="modal-title"></h2>
+            <div class="tech-stack">
+              <h3>Technologies Used</h3>
+              <ul id="modal-tech-stack"></ul>
+            </div>
+            <div class="project-description" id="modal-description"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image zoom lightbox -->
+    <div id="image-lightbox" class="image-lightbox" hidden role="dialog" aria-modal="true" aria-label="Zoomed project image">
+      <button type="button" class="lightbox-close" aria-label="Close zoomed image">&times;</button>
+      <button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>
+      <div class="lightbox-stage">
+        <img id="lightbox-img" alt="Zoomed project screenshot">
+      </div>
+      <button type="button" class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>
+      <p class="lightbox-hint">Pinch, scroll, or double-tap to zoom · Drag to pan</p>
+    </div>
+  </body>
+
+</html>

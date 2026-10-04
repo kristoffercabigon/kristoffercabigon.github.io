@@ -1,0 +1,320 @@
+@media screen and (max-width: 899px) {
+    .modal { padding: 0.5rem; align-items: stretch; }
+    .modal-content.landscape {
+      height: 92vh;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 0.85rem;
+    }
+    .modal-stack {
+      height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .gallery-section {
+      flex: 0 0 auto;
+      height: auto;
+      min-height: 38vh;
+      padding: 3rem 0.85rem 0.85rem;
+    }
+    .gallery-main { min-height: 32vh; }
+    .gallery-zoom-hint { opacity: 0.9; }
+    .project-details {
+      flex: 0 0 auto;
+      height: auto;
+      min-height: auto;
+      overflow: visible;
+      margin-top: 0;
+      padding: 1.15rem 1.15rem 1.75rem;
+    }
+    .project-details h2 { font-size: 1.3rem; }
+    .project-description { font-size: 0.9rem; }
+    .tech-stack { margin-bottom: 1rem; padding-bottom: 1rem; }
+    .lightbox-hint { font-size: 0.68rem; }
+    .lightbox-nav { width: 2.35rem; height: 2.35rem; }
+}
+
+@media screen and (max-width: 1400px) {
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+    .about-containers {
+      flex-wrap: wrap;
+    }
+    #contact,
+    #projects {
+      height: fit-content;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+    #experience,
+    #stack,
+    .experience-details-container {
+      margin-top: 2rem;
+    }
+    #profile,
+    .section-container {
+      display: block;
+    }
+    .arrow {
+      display: none;
+    }
+    section,
+    .section-container {
+      height: fit-content;
+    }
+    section {
+      margin: 0 5%;
+    }
+    .about-container {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 1rem;
+    }
+    .about-intro-grid {
+      gap: 2.5rem;
+    }
+    .exp-item {
+      gap: 2rem;
+    }
+    #about .section__pic-container {
+      width: 275px;
+      height: 350px;
+      margin: 0 auto 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #about .section__pic-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .about-containers {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    .about-intro-grid {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      margin: 2rem auto;
+    }
+    .about-intro-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-pic-wrapper {
+      margin: 0 auto;
+    }
+    .about-bio-content {
+      text-align: center;
+      width: 100%;
+    }
+    .about-quick-tags {
+      justify-content: center;
+    }
+    .exp-item {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 1.75rem 0;
+    }
+    .exp-date-col {
+      padding-top: 0;
+      font-size: 0.8rem;
+    }
+    .exp-headline {
+      font-size: 2.15rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #contact,
+    footer {
+      height: 40vh;
+    }
+    #profile {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+    article {
+      font-size: 1rem;
+    }
+    footer nav {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+      flex-wrap: wrap;
+    }
+    .contact-info-container {
+      margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+    .experience-sub-title {
+      font-size: 1.25rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    #about {
+      margin: 0 4% !important;
+      width: auto !important;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .about-container {
+      padding: 0;
+    }
+    .about-intro-grid {
+      gap: 1.5rem;
+      margin: 1.5rem auto 2rem;
+    }
+    .about-bio-heading {
+      font-size: 1.2rem;
+      line-height: 1.35;
+    }
+    .about-bio-text {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+    .about-quick-tags {
+      gap: 0.4rem;
+      justify-content: flex-start;
+    }
+    .about-quick-pill {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.65rem;
+    }
+    .experience-showcase {
+      margin: 2rem 0 1.5rem;
+    }
+    .exp-eyebrow {
+      font-size: 0.7rem;
+    }
+    .exp-headline {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+    .exp-item {
+      padding: 1.35rem 0;
+      gap: 0.5rem;
+    }
+    .exp-date-col {
+      font-size: 0.75rem;
+    }
+    .exp-role-title {
+      font-size: 1.15rem;
+      line-height: 1.3;
+    }
+    .exp-company-name {
+      font-size: 0.875rem;
+    }
+    .exp-description {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0.65rem 0 0.85rem;
+    }
+    .exp-tags-wrapper {
+      gap: 0.4rem;
+    }
+    .exp-tag {
+      font-size: 0.725rem;
+      padding: 0.22rem 0.6rem;
+    }
+    #about .section__pic-container {
+      width: 200px;
+      height: 250px;
+      margin: 0 auto 2rem;
+    }
+    #about .section__pic-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .section__text__p2 {
+      font-size: 1.25rem;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .text-container {
+      text-align: justify;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .exp-headline {
+      font-size: 1.5rem;
+    }
+    .exp-role-title {
+      font-size: 1.05rem;
+    }
+    .about-bio-heading {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    #profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      height: 80vh;
+    }
+
+    #profile .section__pic-container {
+      width: 400px;
+      height: 400px;
+      margin: 0;
+    }
+
+    .profile-pic-wrapper {
+      margin: 0;
+    }
+
+    .section__text {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  @media screen and (max-width: 1399px) {
+    #profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    #profile .section__pic-container {
+      margin: 0 auto;
+    }
+
+    .section__text {
+      align-items: center;
+      text-align: center;
+    }
+  }
