@@ -121,22 +121,58 @@
         <!-- Profile & Bio Row -->
         <div class="about-intro-grid">
           <div class="about-pic-wrapper">
-            <div class="about-flip-card" data-about-flip-card>
+            <!-- Desktop: portrait flip card -->
+            <div
+              class="about-flip-card about-flip-card--portrait"
+              data-about-flip-card
+              data-fc-width="300"
+              data-fc-height="400"
+            >
               <div class="about-flip-card__scene">
                 <div class="about-flip-card__inner">
                   <div class="about-flip-card__face about-flip-card__face--front">
-                    <picture>
-                      <source media="(max-width: 950px)" srcset="./assets/second-profile-pic-full.jpg" />
-                      <img src="./assets/second-profile-pic-full-portrait.jpg" alt="Kristoffer Cabigon" class="about-pic" />
-                    </picture>
+                    <img
+                      src="./assets/second-profile-pic-full-portrait.jpg"
+                      alt="Kristoffer Cabigon"
+                      class="about-pic"
+                    />
                   </div>
                   <div class="about-flip-card__face about-flip-card__face--back">
                     <div class="about-flip-card__back">
                       <p class="about-flip-card__eyebrow">Software Developer</p>
                       <h3>Kristoffer Cabigon</h3>
                       <p>Enterprise web · legacy modernization · application support</p>
-                      <p>Caloocan, Philippines</p>
+                      <p>Makati, Philippines</p>
                       <p class="about-flip-card__hint">Click or drag to flip</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="about-flip-card__glare" aria-hidden="true"></div>
+            </div>
+
+            <!-- Small screens (stacked layout): landscape flip card -->
+            <div
+              class="about-flip-card about-flip-card--landscape"
+              data-about-flip-card
+              data-fc-layout="landscape"
+            >
+              <div class="about-flip-card__scene">
+                <div class="about-flip-card__inner">
+                  <div class="about-flip-card__face about-flip-card__face--front">
+                    <img
+                      src="./assets/second-profile-pic-full.jpg"
+                      alt="Kristoffer Cabigon"
+                      class="about-pic"
+                    />
+                  </div>
+                  <div class="about-flip-card__face about-flip-card__face--back">
+                    <div class="about-flip-card__back">
+                      <p class="about-flip-card__eyebrow">Software Developer</p>
+                      <h3>Kristoffer Cabigon</h3>
+                      <p>Enterprise web · legacy modernization · application support</p>
+                      <p>Makati, Philippines</p>
+                      <p class="about-flip-card__hint">Tap to flip</p>
                     </div>
                   </div>
                 </div>
@@ -147,14 +183,14 @@
           <div class="about-bio-content">
             <h2 class="about-bio-heading">Transforming complex business operations into streamlined digital systems.</h2>
             <p class="about-bio-text">
-              Hello! I’m <strong>Kristoffer Cabigon</strong>, a software developer based in Caloocan, Philippines. I specialize in enterprise web development, legacy system modernization, and application support.
+              Hello! I’m <strong>Kristoffer Cabigon</strong>, a software developer based in Makati, Philippines. I specialize in enterprise web development, legacy system modernization, and application support.
             </p>
             <p class="about-bio-text">
               My background bridges hands-on database architecture, API integration, and user-focused frontend engineering. From modernizing mission-critical legacy desktop tools to architecting dedicated ticketing workflows, I focus on building dependable software that solves operational bottlenecks and scales cleanly.
             </p>
             <div class="about-quick-tags">
               <span class="about-quick-pill"><span class="about-status-dot"></span> Open to Opportunities</span>
-              <span class="about-quick-pill">📍 Caloocan, Philippines</span>
+              <span class="about-quick-pill">📍 Makati, Philippines</span>
               <span class="about-quick-pill">🎓 BS in Information Systems</span>
             </div>
           </div>

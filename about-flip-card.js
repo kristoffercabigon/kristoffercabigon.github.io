@@ -37,13 +37,14 @@
     root.dataset.flipReady = '1';
 
     const opts = { ...DEFAULTS };
+    if (root.dataset.fcWidth) opts.width = Number(root.dataset.fcWidth) || opts.width;
+    if (root.dataset.fcHeight) opts.height = Number(root.dataset.fcHeight) || opts.height;
+
     const scene = root.querySelector('.about-flip-card__scene');
     const inner = root.querySelector('.about-flip-card__inner');
     const glare = root.querySelector('.about-flip-card__glare');
     if (!scene || !inner) return;
 
-    root.style.setProperty('--fc-width', `${opts.width}px`);
-    root.style.setProperty('--fc-height', `${opts.height}px`);
     root.style.setProperty('--fc-radius', `${opts.radius}px`);
     root.style.setProperty('--fc-bg', opts.background);
     root.style.setProperty('--fc-color', opts.color);
@@ -55,6 +56,28 @@
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const coarse = window.matchMedia('(pointer: coarse)');
+    const isLandscapeCard = root.dataset.fcLayout === 'landscape' || root.classList.contains('about-flip-card--landscape');
+
+    function syncCardSize() {
+      if (!isLandscapeCard) {
+        root.style.width = '';
+        root.style.height = '';
+        return;
+      }
+      if (!window.matchMedia('(max-width: 950px)').matches) {
+        root.style.width = '';
+        root.style.height = '';
+        return;
+      }
+      const width = Math.min(560, Math.round(window.innerWidth * 0.92));
+      const height = Math.round((width * 9) / 16); // 1920×1080
+      root.style.width = `${width}px`;
+      root.style.height = `${height}px`;
+    }
+
+    syncCardSize();
+    window.addEventListener('resize', syncCardSize, { passive: true });
+    window.matchMedia('(max-width: 950px)').addEventListener('change', syncCardSize);
 
     let flipped = false;
     let dragging = false;

@@ -96,14 +96,10 @@
   transform: rotateX(180deg);
 }
 
-.about-flip-card__face picture,
 .about-flip-card__face .about-pic {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.about-flip-card__face .about-pic {
   object-fit: cover;
   object-position: center center;
   pointer-events: none;
@@ -174,16 +170,46 @@
   opacity: 1;
 }
 
+/* Desktop: portrait card only */
+.about-flip-card--landscape {
+  display: none;
+}
+
+.about-flip-card--portrait {
+  display: block;
+}
+
+/* Small / stacked About layout: landscape card only */
 @media screen and (max-width: 950px) {
   .about-pic-wrapper {
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
-  .about-flip-card {
-    --fc-width: min(300px, 78vw);
-    --fc-height: min(400px, calc(min(300px, 78vw) * 4 / 3));
-    width: var(--fc-width);
-    height: var(--fc-height);
+  .about-flip-card--portrait {
+    display: none !important;
+  }
+
+  .about-flip-card--landscape {
+    display: block;
+    width: min(560px, 92vw);
+    height: calc(min(560px, 92vw) * 9 / 16);
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+  }
+
+  .about-flip-card--landscape .about-flip-card__back {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .about-flip-card--landscape .about-flip-card__back h3 {
+    font-size: 1.15rem;
+  }
+
+  .about-flip-card--landscape .about-flip-card__back p {
+    font-size: 0.85rem;
   }
 }
 

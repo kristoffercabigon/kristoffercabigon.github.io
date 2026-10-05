@@ -47,8 +47,8 @@
     w = window.innerWidth;
     h = window.innerHeight;
     gutter = Math.max(88, Math.min(170, w * 0.1));
-    // Keep clear of Kris.Dev / Menu header controls
-    topSafe = Math.max(88, Math.min(120, h * 0.12));
+    /* Keep clear of Kris.Dev / Menu header controls */
+    topSafe = Math.max(64, Math.min(100, h * 0.1));
     bottomSafe = 28;
     canvas.width = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);

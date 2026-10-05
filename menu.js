@@ -8,6 +8,24 @@
   if (!trigger || !layer) return;
   // Show immediately so a later animation setup error can't leave the control missing.
   trigger.hidden = false;
+
+  // Keep the page offset equal to the real header height (brand / menu row).
+  const header = shell.querySelector('.pm-header');
+  const headerSpace = document.querySelector('.pm-header-space');
+  function syncHeaderSpace() {
+    if (!header) return;
+    const height = Math.ceil(header.getBoundingClientRect().height);
+    if (height > 0) {
+      shell.style.setProperty('--pm-header-height', `${height}px`);
+      if (headerSpace) headerSpace.style.height = `${height}px`;
+    }
+  }
+  syncHeaderSpace();
+  window.addEventListener('resize', syncHeaderSpace, { passive: true });
+  if (typeof ResizeObserver !== 'undefined' && header) {
+    new ResizeObserver(syncHeaderSpace).observe(header);
+  }
+
   const links = [...shell.querySelectorAll('.pm-link')];
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const duration = 1250;
